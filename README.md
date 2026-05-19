@@ -4,6 +4,16 @@ This repository contains implementations of advanced model compression technique
 
 Developed as part of the CS437 Deep Learning coursework at LUMS, this project focuses on optimizing ResNet architectures trained on the CIFAR-10 dataset using two primary techniques: **Magnitude-Based Pruning** and **Knowledge Distillation**.
 
+## 🌐 Federated Learning Framework
+
+Built as the first component of this project — a complete federated learning infrastructure from scratch, without using any FL library (no Flower, no TensorFlow Federated).
+
+- **FedAvg:** Implemented the canonical Federated Averaging algorithm across 10 simulated clients with non-IID Dirichlet-distributed data (α=0.5), conducting a full client heterogeneity audit.
+- **FedProx:** Extended FedAvg with a proximal term (μ) to stabilise training under high data heterogeneity.
+- **Real-World Application:** Applied the framework to the Distracted Driver Detection dataset (SFD3) with fairness-aware aggregation design.
+
+The compression work (pruning + distillation) was then applied to models trained within this federated setting.
+
 ## 🛠️ Tech Stack
 * **Framework:** PyTorch, torchvision
 * **Language:** Python
